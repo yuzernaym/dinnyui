@@ -1,0 +1,415 @@
+/*
+Colors used:
+Main background color (new) : #F5F4EB
+Primary Color (Off White): #FFFCF8;
+Secondary Color (Beige): #EEE7D8;
+Primary Text Color (Dark Olive): #3A410C;
+Olive : #5B651E;
+Light Olive : #849133;
+Brown : #90681A;
+Dark Brown : #61410A;
+Tan : #B88523;
+*/
+
+/*
+selector {
+  margin: 0 auto; (No spacing to top and bottom and auto spacing to left and right)
+} 
+  */
+
+/* MAIN ELEMENTS ========================================= */
+
+* {
+  box-sizing: border-box;
+}
+main {
+  padding-top: 20px;
+}
+
+body {
+  background-color: #f5f4eb;
+  font-family: "Source Code Pro", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #3a410c;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.4;
+}
+h1 {
+  font-size: 2.75em;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.25em;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.75em;
+  font-weight: 400;
+}
+h4 {
+  font-size: 1.35em;
+  font-weight: 400;
+}
+
+header {
+  background-color: #eee7d8;
+  position: fixed;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 2px 13px rgba(144, 105, 26, 0.3);
+  -webkit-box-shadow: 0 2px 13px rgba(144, 105, 26, 0.3);
+  -moz-box-shadow: 0 2px 13px rgba(144, 105, 26, 0.3);
+}
+
+/* link stylings ===== */
+
+a {
+  color: #849133;
+  text-decoration: none; /* No underlining */
+}
+* a:visited {
+  /* visited link */
+  color: #849133;
+}
+a:hover {
+  color: #5b651e;
+  text-decoration: underline; /* Underlining when hovering over a link */
+}
+
+a:focus {
+  color: #5b651e;
+  text-decoration: underline;
+}
+*a:active {
+  /* selected link */
+  color: #3a410c;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* CLASSES ========================================= */
+
+.button {
+  display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
+  background-color: #5b651e;
+  color: #fffcf8; /* needed to override the default link color */
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 5px;
+  border-bottom: 2px solid #3a410c; /* width of the border, type, color */
+  transition: 0.2s opacity;
+}
+
+.button:hover {
+  opacity: 0.8; /* Reduces the opacity of the button to 80% */
+  color: #fffcf8;
+  text-decoration: none;
+}
+
+.button:active {
+  opacity: 0.8; /* Reduces the opacity of the button to 80% */
+  color: #fffcf8;
+  text-decoration: none;
+}
+
+.button:visited {
+  opacity: 0.8; /* Reduces the opacity of the button to 80% */
+  color: #fffcf8;
+  text-decoration: none;
+}
+
+.button.resume {
+  display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
+  background-color: #5b651e;
+  color: #fffcf8; /* needed to override the default link color */
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 5px;
+  border-bottom: 2px solid #3a410c; /* width of the border, type, color */
+  transition: 0.2s opacity;
+}
+
+.button.resume:hover {
+  opacity: 0.8; /* Reduces the opacity of the button to 80% */
+  text-decoration: none;
+}
+
+.button.resume:active {
+  opacity: 0.8; /* Reduces the opacity of the button to 80% */
+  text-decoration: none;
+}
+
+.button.contact {
+  background-color: transparent;
+  color: #3a410c;
+  text-transform: uppercase;
+  border: 2px solid #3a410c;
+}
+
+.button.contact:hover {
+  background-color: #3a410c;
+  color: #fffcf8;
+}
+
+.button.contact:active {
+  background-color: #3a410c;
+  color: #fffcf8;
+}
+
+/* STYLES/UNIQUE IDs ========================================= */
+
+#about {
+  margin-top: 20px;
+}
+
+#about h1 {
+  font-size: 2.25em;
+  font-weight: 700;
+  line-height: 1.4;
+  padding-top: 50px;
+}
+
+#me {
+  width: 70%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Layout styling =========== */
+
+.container {
+  padding: 0 15px;
+}
+
+.row {
+  margin: 25px 0;
+}
+
+#work .row {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #3a410c;
+}
+
+#hero h1 {
+  text-align: center;
+  padding-top: 20px;
+}
+#hero p {
+  text-align: center;
+}
+#hero span {
+  text-align: center;
+}
+
+#work h2 {
+  text-align: center;
+}
+
+/* NAV STYLING */
+
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
+}
+
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+
+.navtoggle.responsive li {
+  display: block;
+  padding: 10px 0;
+}
+
+.navtoggle.responsive li:last-child {
+  padding: 0 0 10px;
+}
+
+.navtoggle,
+.navtoggle.responsive {
+  position: relative;
+}
+
+.navtoggle li .icon {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 20px;
+  padding-right: 0;
+}
+
+nav > ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav > ul > li > a {
+  padding: 0 15px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #3a410c;
+}
+
+#nav a {
+  color: #3a410c;
+}
+
+#nav a:hover {
+  color: #3a410c;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+#nav a:active {
+  color: #3a410c;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+#hero {
+  background-color: #eee7d8;
+  padding: 20px;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+#hero span {
+  display: block;
+  font-size: 1.75em;
+  font-weight: 600;
+}
+
+footer {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 35px 9% 12px 9%;
+  text-align: center;
+}
+
+.social {
+  margin-top: 25px;
+  width: 40px;
+}
+
+/* MEDIA QUERIES ======================================= */
+
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {
+  header {
+    text-align: unset;
+    padding: 20px 0 13px;
+  }
+
+  main {
+    padding-top: 56px;
+  }
+
+  nav {
+    width: auto;
+    float: right;
+    margin-top: 4px;
+  }
+
+  nav > ul > li {
+    display: inline-block;
+  }
+
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+
+  .navtoggle li:last-child {
+    display: none;
+  }
+
+  .col-md-6 {
+    width: 50%;
+    padding: 10px;
+  }
+  [class*="col-"] {
+    float: left;
+  }
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  #about-page h3 {
+    margin-top: 0;
+  }
+}
+
+/* ==============================
+Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
+
+  .col-lg-5 {
+    width: 40%;
+  }
+  .col-lg-7 {
+    width: 60%;
+  }
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* ==============================
+X-large devices (1440px or larger)
+================================= */
+@media only screen and (min-width: 1440px) {
+}
+
+/* ANIMATIONS ================================== */
+
+/* 
+@keyframes color-change {
+  0% {fill: #edc655;}
+  50% {fill: #fcffad;}
+  100% {fill: #f76414;}
+}
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+
+@keyframes cloud-move {
+  from {transform: translate(0,50px);}
+  to {transform: translate(200px,50px);}
+}
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {transform: translate(446px,48px);}
+  to {transform: translate(100px, 48px);}
+}
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+*/
